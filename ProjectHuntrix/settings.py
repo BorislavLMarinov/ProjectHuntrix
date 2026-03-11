@@ -33,6 +33,13 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+PROJECTHUNTRIX_APPS = [
+    'core_common',
+    'huntrix_game_app',
+    'player_app',
+    'analytics_app',
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core_common.apps.ProjectHuntrixConfig',
-]
+] + PROJECTHUNTRIX_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
