@@ -4,7 +4,6 @@ from .models import DifficultyLevel, CountingTask, ArithmeticTask, MazeTask, Pat
 admin.site.register(DifficultyLevel)
 admin.site.register(CountingTask)
 admin.site.register(ArithmeticTask)
-admin.site.register(MazeTask)
 admin.site.register(PatternChallenge)
 
 @admin.register(MazeTask)
