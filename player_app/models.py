@@ -14,7 +14,7 @@ def validate_stage_name(value):
 
 
 class KidProfile(models.Model):
-    creator = models.ForeignKey(
+    parent = models.ForeignKey(
         'core_common.Parent',
         on_delete=models.CASCADE,
         related_name='kids',
@@ -33,7 +33,7 @@ class KidProfile(models.Model):
         validators=[validators.MinLengthValidator(2), validate_stage_name],
         help_text="Enter the kid's name or KPOP stage name."
     )
-
+    age = models.PositiveIntegerField(default=7)
     total_points = models.PositiveIntegerField(default=0)
     level = models.PositiveIntegerField(default=1)
 
